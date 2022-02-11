@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="css/style.css">
+<div class="contenedor shadow-lg mb-5"></div>
+<div id="elecciones">
+    <h4 class="text-center mt-5 py-2">Elecciones actuales</h4><hr>
+    <div class="row mt-4">
+        {{#each candidato}}
+        <div class="col-md-4 mx-auto">
+            <div class="card p-4">
+                <div class="card-header">
+                    <h6 class="text-center">{{this.nomDePartido}}</h6>
+                </div>
+                <div class="card-body">
+                    <h1 class="text-center">- {{this.numDeLista}} -</h1>
+                    <h6 class="text-center">Lider Politico: {{this.liderPolitico}}</h6>
+                </div>
+                <div class="card-footer">
+                    <h6 class="text-center">Total de votos:{{this.votos}}</h6>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<div id="nosotros">
+    <h4 class="text-center mt-5 py-2">Acerca de nosotros</h4><hr>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card nosotros"></div>
+        </div>
+        <div class="col-md-6">
+            <div class="card texto shadow-lg mb-5">
+                <h5 class="text-center mt-4">xd</h5>
+            </div>
+        </div>
+    </div>
+</div>

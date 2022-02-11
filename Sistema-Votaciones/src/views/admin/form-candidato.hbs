@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-5 mx-auto">
+        <div class="card p-4">
+            <h6 class="text-center p-2">Formulario de Registro</h6>
+            <form action="/candidato-accion" method="POST">
+                <input type="hidden" name="_id" value="{{candidato._id}}">
+                <div class="form-group">
+                    <input type="number" class="form-control" name="numDeLista" placeholder="Ingrese numero de lista" value="{{candidato.numDeLista}}">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="nomDePartido" placeholder="Ingrese nombre de partido politico" value="{{candidato.nomDePartido}}">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="liderPolitico" placeholder="Ingrese nombre de lider politico" value="{{candidato.liderPolitico}}">
+                </div>
+                <button class="btn btn-primary btn-info btn-block"><i class="far fa-check-circle"></i> Guardar</button>
+                <a href="/admin-candidato" class="btn btn-danger btn-block"><i class="fas fa-ban"></i> Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>

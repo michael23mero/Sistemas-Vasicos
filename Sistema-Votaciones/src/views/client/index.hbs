@@ -1,0 +1,30 @@
+<h4 class="text-center mt-4">Bienvenido:
+    {{#if user}}
+        {{user.password}}
+    {{/if}}
+</h4>
+<hr><h5 class="text-center p-4">Recuerda que la eleccion queda en ti</h5>
+<div class="row mt-4">
+    {{#each candidato}}
+        <div class="col-md-4 mx-auto">
+            <div class="card p-4">
+                <div class="card-header">
+                    <h6 class="text-center">{{this.nomDePartido}}</h6>
+                </div>
+                <div class="card-body">
+                    <h1 class="text-center">- {{this.numDeLista}} -</h1>
+                    <h6 class="text-center">Lider Politico: {{this.liderPolitico}}</h6>
+                </div>
+                <div class="card-footer">
+                    <h6 class="text-center">Total de votos:{{this.votos}}</h6>
+                </div>
+                <a href="/votar/{{this._id}}" class="btn btn-dark">Votar</a>
+            </div>
+        </div>
+    {{/each}}
+</div>
+<style>
+    h1{
+        font-size: 65px;
+    }
+</style> 

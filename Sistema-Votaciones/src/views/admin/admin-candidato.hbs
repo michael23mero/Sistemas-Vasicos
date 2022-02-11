@@ -1,0 +1,34 @@
+<div class="row mt-4 p-4">
+    <div class="col-7 mx-auto text-center"><h5>Elecciones Presidenciales 2022</h5><hr></div>
+    <div class="col-2 mx-auto"><a href="/candidato-form" class="btn btn-success btn-block"><i class="fas fa-plus-square"></i> Nuevo</a></div>
+</div>
+<div class="row">
+    <div class="col-md-9 mx-auto">
+        <table class="table table-striped table-responsive table-hover">
+            <thead>
+                <td># LISTA</td>
+                <td>PARTIDO POLITICO</td>
+                <td>LIDER POLITICO</td>
+                <td>VOTOS</td>
+                <td colspan="2" class="text-center">ACCION</td>
+            </thead>
+            {{#each candidato}}
+            <tbody>
+                <td>{{this.numDeLista}}</td>
+                <td>{{this.nomDePartido}}</td>
+                <td>{{this.liderPolitico}}</td>
+                <td>{{this.votos}}</td>
+                <td><a href="/update-candidato/{{this._id}}" class="btn btn-warning btn-block"><i class="far fa-edit"></i> Update</a></td>
+                <td><a href="/delete-candidato/{{this._id}}" class="btn btn-danger btn-block"><i class="fas fa-trash-alt"></i> Delete</a></td>
+            </tbody>
+            {{/each}}
+        </table>
+    </div>
+</div>
+<style>
+hr{
+    width: 80%;
+    height: 2px;
+    background-color: aqua;
+}
+</style>

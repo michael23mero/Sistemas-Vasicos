@@ -1,0 +1,38 @@
+<div class="row mt-4 py-4">
+    <div class="col-md-6">
+        <img src="/img/logo-uleam.png" alt="" class="card-img">
+        <h5 class="text-center mt-4 py-4">Inicia sesion, tu voto es secreto</h5>
+    </div>
+    <div class="col-md-6">
+        <div class="card p-4">
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Ingrese su usuario" name="identificacion">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Ingrese su contraseña" name="password">
+                </div>
+                <button type="submit" class="btn btn-info btn-block">Iniciar sesion</button>
+            </form>
+            <div class="row mt-4 text-center">
+                <div class="col-md-6">
+                    <a href="">Solicitar registro</a>
+                </div>
+                <div class="col-md-6">
+                    <a href="/">Ingresar como administrador<a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{#if alert }}
+    <script>
+        Swal.fire({
+            text: '{{alertMessage}}',
+            icon: '{{alertIcon}}',
+            timer: '{{time}}'
+        }).then(() =>{
+            window.location='/{{ruta}}'
+        })
+    </script>
+{{/if}}
